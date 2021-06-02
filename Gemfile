@@ -3,31 +3,38 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+# Core
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
-# Use Puma as the app server
+# Config
+gem 'dotenv-rails', '~> 2.2'
+gem 'rails-i18n'
+gem 'config'
+#Middleware
 gem 'puma', '~> 5.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'pg', '~> 1.1'
+# Use Puma as the app server
+#View/Front
 gem 'webpacker', '~> 5.0'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'coffee-rails', '~> 5.0'
+gem 'jquery-rails'
+gem 'haml-rails', '~> 2.0', '>= 2.0.1'
+gem 'sass-rails', '>= 6'
+# Backend
+gem 'devise'
+gem 'jbuilder', '~> 2.7'
+gem 'enumerize'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-github'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'gon'
+gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'bulma-rails', '~> 0.9.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
