@@ -44,7 +44,6 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
-  end
 end
 
   def confirm
@@ -71,3 +70,4 @@ end
     def post_params
       params.require(:post).permit(:content)
     end
+end
