@@ -1,11 +1,11 @@
 <h3> are you sure you want to post this?</h3>
 
-<%= form_with(model: @post,url: posts_path, local: true) do |form| %>
+<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
-  <p><strong>Content:</strong>
+  <p><strong>content:</strong>
     <%= @post.content %>
   </p>
-  <div class="action">
+  <div class="actions">
   <%= form.submit "Yes" %>
   <%= form.submit "No", name: 'back' %>
   </div>

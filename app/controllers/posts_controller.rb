@@ -45,6 +45,7 @@ class PostsController < ApplicationController
       end
     end
   end
+end
 
   def confirm
     @post = Post.new(post_params)
@@ -63,11 +64,10 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = Content.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:content)
     end
-  end
